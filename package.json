@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node backend/dist/server.js",
-    "build": "ng build --output-path backend/public",
+    "start": "node start",
+    "build": "ng build --output-path dist",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "git push origin master && git push heroku master",
-    "postinstall": "ng build --output-path backend/public"
+    "deploy": "git push origin master ",
+    "postinstall": "ng build --output-path dist"
   },
   "engines": {
     "node": "12.16.2",
