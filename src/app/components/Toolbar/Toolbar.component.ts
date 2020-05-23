@@ -1,6 +1,9 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faWindowClose } from "@fortawesome/free-solid-svg-icons";
+import { Router } from "@angular/router";
+
+
 
 @Component({
   selector: "Toolbar",
@@ -10,14 +13,19 @@ import { faWindowClose } from "@fortawesome/free-solid-svg-icons";
 export class ToolbarComponent {
   title = "Toolbar";
   menu_icon = faBars;
+  @Output() Navigate = new EventEmitter();
+
   close_icon = faWindowClose;
+  menu = [
+    { name: "ABOUT US", url: "/Home", element:'AboutUs'},
+    { name: "OUR WORK", url: "/Home", element: "OurWork" },
+    { name: "SERVICES", url: "/Home", element: "Services" },
+    { name: "CONTACT US", url: "/Home",element: "ContactUs" }
+  ]
 
   showMobileNavBar: boolean = false;
-  isLogin() {
-    return localStorage.getItem("userId") === "null";
 
-  }
-  logout() {
-    localStorage.setItem("userId", "null"); 
+  navigateTo(element: string) {
+    this.Navigate.emit(element)
   }
 }

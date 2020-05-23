@@ -1,61 +1,33 @@
-<div class="container">
-  <app-loader [id]="'landing'"></app-loader>
-
-  <div *ngIf="showCreateAchievement">
-    <div class="landing__header">
-      <h1 class="mt-4">Be Your Own Hero</h1>
-    </div>
-    <div class="ml-3">
-      <p>Create your achievement and read it when you feel depress in life</p>
-    </div>
-
-    <div class="card landing_noAchievement">
-      <h3 class="landing_noAchievement_header">
-        You Dont have any Achievemnet to show.
-      </h3>
-    </div>
-    <div class="mt-5">
-      <button
-        type="button"
-        [routerLink]="['/AddAchievement']"
-        class="btn btn-outline-info px-2"
-      >
-        Create
-      </button>
-    </div>
-  </div>
-  <div *ngIf="!showCreateAchievement" class="d-flex">
-    <div class="achievemet_card p-2 m-2" *ngFor="let item of achievemets">
-      <h5>{{ item.title }}</h5>
-      <div class="p-2">
-        <span class="font-weight-light achieve_label">
-          Category
-        </span>
-        <span class="pl-4">{{ item.category }}</span>
-      </div>
-      <div class="p-2">
-        <span class="font-weight-light achieve_label">
-          Lines
-        </span>
-        <span class="pl-4 achieve_lines">{{ item.lines }}</span>
-      </div>
-      <div class="p-2">
-        <span class="pl-4 achieve_lines">{{ item.description }}</span>
+<div class="container container-m  m-auto">
+<Toolbar (Navigate)="navigateTo($event)"></Toolbar>
+    <!-- <app-list [lists]="borderBulletList" [type]=" 'border'">
+</app-list> -->
+  <div class="m-sm-auto p-sm-4 m-lg-4 m-xl-4 m-2   b-l div-box-shadow" #Home>
+    <div class="d-flex home_banner justify-content-between ">
+      <div class="mt-5 ml-4 ml-sm-1">
+        <section class="heading-1">
+          APSKON Engineering
+          and Consulting
+        </section>
+        <app-list [lists]="borderBulletList" [type]=" 'border' ">
+        </app-list>
       </div>
 
-
-        <button type="button" class="btn btn-outline-info px-2 m-auto">
-            Open
-        </button>
+      <div class="m-auto">
+        <img src="../../assets/achievement.svg" alt="achievement " class="home_achiever" class="imgEngineer"/>
+      </div>
     </div>
-  </div>
-  <div class="mt-5">
-    <button
-      type="button"
-      [routerLink]="['/AddAchievement']"
-      class="btn btn-outline-info px-2"
-    >
-      Create New Achievement
-    </button>
-  </div>
+
+    <div class="mt-3 mb-5 text-center">
+         <h3 class="heading-3 m-auto mb-4 ">OUR SERVICES ARE <span class="tc-p" >PAN</span> INDIA BASIS</h3>
+    </div>
+</div>
+
+
+<div class="m-sm-auto p-sm-4 m-lg-4 m-xl-4 m-2 b-l  div-box-shadow " #AboutUs>
+<app-about></app-about>
+</div>
+
+<div class="m-sm-auto p-sm-4 m-lg-4 m-xl-4 m-2 b-l  div-box-shadow " #OurWork>
+  <app-work></app-work>
 </div>

@@ -1,41 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import { LoaderService } from "../Loader/Loader.service";
-import { ApiService } from '../ApiService/Api.service';
+import { Component, ViewChild } from '@angular/core';
+
+
 import { Router } from '@angular/router';
-import { userResponse } from '../CommonServices/Common.Interface';
+
 
 @Component({
-  selector: "app-landing",
-  templateUrl: "./Landing.component.html",
-  styleUrls: ["./Landing.component.scss"],
+  selector: 'app-landing',
+  templateUrl: 'landing.component.html',
+  styleUrls: ['landing.component.scss'],
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent {
 
-  public showCreateAchievement = false;
-  public achievemets = [];
-  constructor(
-    private loaderService: LoaderService,
-    private apiService: ApiService,
-    private router: Router
-  ) {}
+  @ViewChild("AboutUs", { static: false }) AboutUs;
+  @ViewChild("ContactUs", { static: false }) ContactUs;
+  borderBulletList = [{
+    data: "We are <span class='tc-p'>ISO 9001:2015</span> Certified Company with specialisation in project management & om service"
+  },
+  {
+    data: " We cater industries like <span class='tc-p'>STEEL</span>, <span class='tc-p'>POWER</span>, <span class='tc-p'>MINING</span>, <span class='tc-p'>FERTILIZER</span>, <span class='tc-p'>OIL</span>, <span class='tc-p'>GAS </span> & other Manufacturing Industries "
+    },
+    {
+      data: "We also provide  customize engineering solutions including <span class='tc-p'>EPC</span> services"
+  }]
+  navigateTo(element: string) {
+    console.log(element)
+    this[element].nativeElement.scrollIntoView({ behavior: "smooth" });
+  } constructor(
 
+  ) {
+
+  }
   ngOnInit() {
-    this.loaderService.showLoader("landing");
-    setTimeout(() => {
-      this.loaderService.hideLoader("landing");
-    }, 1000);
 
-    const userId = localStorage.getItem("userId");
-    if (userId !== "undefined") {
-      this.apiService
-        .getUserInfo(userId)
-        .subscribe((response: userResponse) => {
-          if (userId === response._id) {
-            this.showCreateAchievement = !response.achievement.length ? true : false;
-            this.achievemets = response.achievement;
-            this.achievemets.push(response.achievement[0]);
-          }
-        });
-    }
+
   }
 }

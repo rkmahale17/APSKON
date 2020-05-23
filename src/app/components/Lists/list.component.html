@@ -1,0 +1,29 @@
+
+
+<div class="p-2" [ngSwitch]="type" >
+
+    <ul  *ngSwitchCase="'border'" class="list__border">
+        <li *ngFor="let item of  lists; index as i">
+            <span class="circle"></span>
+             <span [innerHTML]="item.data"></span>
+        </li>
+    </ul>
+
+    <ul *ngSwitchCase="'bullet'" class="list__bullet">
+        <li *ngFor="let item of  lists; index as i" class="f-wr">
+                        <span class="circle"></span>
+
+            <span [innerHTML]="item.data"></span>
+        </li>
+    </ul>
+
+    <ul *ngSwitchCase="'number'" class="list__number">
+        <li *ngFor="let item of lists; index as i" class="f-wr">
+
+           <span class="tc-p f-wr"> {{ i}} .</span>  
+                        <span [innerHTML]="item.data"></span>
+
+        </li>
+    </ul>
+</div>
+
