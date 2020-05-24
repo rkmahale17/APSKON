@@ -1,7 +1,6 @@
 @import "../../../styles.scss";
 
-
-.circle{
+.circle {
   width: 20px;
   height: 20px;
   background: black;
@@ -13,38 +12,31 @@
   background: $primary;
 }
 
-
-.list__number{
+.list__number {
   border-left: none;
-
 }
 .list__bullet {
-    border-left:none;
-    padding: 0px;
-    .circle{
-  width: 15px;
-  height: 15px;
-  background: black;
-  border: none;
-  border-radius: 10px;
-  float: left;
-  position: relative;
-  left: -21px;
-  background: $primary;
-  top:5px;
+  border-left: none;
+  padding: 0px;
+  .circle {
+    width: 12px;
+    height: 12px;
+    background: black;
+    border: none;
+    border-radius: 10px;
+    float: left;
+    position: relative;
+    left: -10px;
+    background: #1639f7;
+    top: 5px;
+  }
 }
-
-
-}
-.list__border{
-
+.list__border {
   border-left: 3px solid black;
- padding: 0px;
-
-
+  padding: 0px;
 }
- 
-  li{
-     list-style:none ;
-     padding: 10px;
-   }
+
+li {
+  list-style: none;
+  padding: 10px;
+}

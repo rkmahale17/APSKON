@@ -1,0 +1,47 @@
+@import "./../../../styles.scss";
+.mainHeadings {
+  border-bottom: 4px solid $primary;
+}
+
+.headingBox {
+  min-width: 200px;
+  max-width: 200px;
+  text-align: center;
+  padding-right: 10px;
+  margin: auto;
+}
+
+.mx-width {
+  // max-width: 600px;
+}
+.extra_bottom_mrgn {
+  margin-bottom: -18px;
+}
+.service_box {
+  width: 300px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #2196f3;
+  border-radius: 10px;
+  margin: auto;
+  height: 290px;
+}
+
+.project_box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project__title {
+  border-bottom: 2px solid $primary;
+}
+.star {
+    color: red;
+    font-size: 16px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.margnBtnN20px{
+margin-bottom: -20px;
+}

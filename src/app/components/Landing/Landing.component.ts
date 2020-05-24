@@ -1,8 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-
-
-import { Router } from '@angular/router';
-
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-landing',
@@ -10,21 +7,28 @@ import { Router } from '@angular/router';
   styleUrls: ['landing.component.scss'],
 })
 export class LandingComponent {
+  upIcon = faArrowUp;
+  @ViewChild('AboutUs', { static: false }) AboutUs;
+  @ViewChild('ContatUs', { static: false }) ContatUs;
+  @ViewChild('OurWork', { static: false }) OurWork;
+  @ViewChild('Home', { static: false }) Home;
+  @ViewChild('Services', { static: false }) Services;
 
-  @ViewChild("AboutUs", { static: false }) AboutUs;
-  @ViewChild("ContactUs", { static: false }) ContactUs;
+
+
+
   borderBulletList = [{
-    data: "We are <span class='tc-p'>ISO 9001:2015</span> Certified Company with specialisation in project management & om service"
+    data: 'We are <span class=\'tc-s f-wm\'>ISO 9001:2015</span> Certified Company with specialisation in <span class=\'tc-s f-wm\'>Project Management</span>, <span class=\'tc-s f-wm\'>O&M</span> service.'
   },
   {
-    data: " We cater industries like <span class='tc-p'>STEEL</span>, <span class='tc-p'>POWER</span>, <span class='tc-p'>MINING</span>, <span class='tc-p'>FERTILIZER</span>, <span class='tc-p'>OIL</span>, <span class='tc-p'>GAS </span> & other Manufacturing Industries "
-    },
-    {
-      data: "We also provide  customize engineering solutions including <span class='tc-p'>EPC</span> services"
-  }]
+    data: 'We cater industries like <span class=\'tc-s f-wm\'>STEEL</span>, <span class=\'tc-s f-wm\'>POWER</span>, <span class=\'tc-s f-wm\'>MINING</span>, <span class=\'tc-s f-wm\'>FERTILIZER</span>, <span class=\'tc-s f-wm\'>OIL</span>, <span class=\'tc-s f-wm\'>GAS </span> & other    <span class=\'tc-s f-wm\'>MANUFATURING </span> industries. '
+  },
+  {
+    data: 'We also provide  customize engineering solutions including <span class=\'tc-s f-wm\'>EPC</span> services.'
+  }];
   navigateTo(element: string) {
-    console.log(element)
-    this[element].nativeElement.scrollIntoView({ behavior: "smooth" });
+    console.log(element);
+    this[element].nativeElement.scrollIntoView({ behavior: 'smooth' });
   } constructor(
 
   ) {

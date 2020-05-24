@@ -1,33 +1,45 @@
 <div class="container container-m  m-auto">
-<Toolbar (Navigate)="navigateTo($event)"></Toolbar>
-    <!-- <app-list [lists]="borderBulletList" [type]=" 'border'">
-</app-list> -->
-  <div class="m-sm-auto p-sm-4 m-lg-4 m-xl-4 m-2   b-l div-box-shadow" #Home>
+  <Toolbar (Navigate)="navigateTo($event)"></Toolbar>
+  <div class="m-sm-auto p-sm-4 m-lg-4 m-xl-4 m-2 mt-4   block-spacing b-l div-box-shadow box-border-radius" #Home>
     <div class="d-flex home_banner justify-content-between ">
-      <div class="mt-5 ml-4 ml-sm-1">
-        <section class="heading-1">
-          APSKON Engineering
+      <div class=" ml-4 ml-sm-1 p-3">
+        <section class="heading-1 main_heading mb-4">
+          Apskon Engineering
           and Consulting
         </section>
-        <app-list [lists]="borderBulletList" [type]=" 'border' ">
+        <app-list [lists]="borderBulletList" [type]=" 'border' " class="my-3">
         </app-list>
       </div>
 
       <div class="m-auto">
-        <img src="../../assets/achievement.svg" alt="achievement " class="home_achiever" class="imgEngineer"/>
+        <img src="assets/achievement.svg" alt="achievement " class="home_achiever" class="imgEngineer" />
       </div>
     </div>
 
-    <div class="mt-3 mb-5 text-center">
-         <h3 class="heading-3 m-auto mb-4 ">OUR SERVICES ARE <span class="tc-p" >PAN</span> INDIA BASIS</h3>
+ <div class="mt-3 mb-5 text-center ">
+      <h3 class="heading-3  mb-4 ">OUR SERVICES ARE <span class="tc-s f-wm">PAN</span> INDIA BASIS</h3>
     </div>
-</div>
+  </div>
 
 
-<div class="m-sm-auto p-sm-4 m-lg-4 m-xl-4 m-2 b-l  div-box-shadow " #AboutUs>
-<app-about></app-about>
-</div>
+  <div class="m-sm-auto p-sm-4 m-lg-4 m-xl-4 m-2 b-l  div-box-shadow block-spacing box-border-radius" #AboutUs>
+    <app-about></app-about>
+  </div>
 
-<div class="m-sm-auto p-sm-4 m-lg-4 m-xl-4 m-2 b-l  div-box-shadow " #OurWork>
-  <app-work></app-work>
-</div>
+  <div class="m-sm-auto p-sm-4 m-lg-4 m-xl-4 m-2 b-l  div-box-shadow block-spacing box-border-radius" #OurWork>
+    <app-work></app-work>
+  </div>
+
+  <div class="m-sm-auto p-sm-4 m-lg-4 m-xl-4 m-2 b-l  div-box-shadow block-spacing box-border-radius " #Services>
+    <app-service></app-service>
+  </div>
+
+  <div class="m-sm-auto p-sm-4 m-lg-4 m-xl-4 m-2  block-spacing" #ContatUs>
+    <app-contact></app-contact>
+  </div>
+
+  <div class="floating-button">
+    <button class="btn-r b-s" (click)="navigateTo('Home')">
+      <fa-icon [icon]="upIcon"></fa-icon>
+    </button>
+  </div>

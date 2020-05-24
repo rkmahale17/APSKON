@@ -1,8 +1,8 @@
-<div class="container toolbar">
-  <div class="d-flex justify-content-between m-4">
+<div class="mt-2 toolbar">
+  <div class="d-flex justify-content-between mx-2 my-4">
     <div>
-      <a href="/Home" class="tc-p heading-3 f-wm letter-space-3">
-      <img src="../../../assets/logo.jpeg" alt="Logo" class="logo"></a>
+      <a class="tc-p heading-3 f-wm letter-space-3" class="cursor-pointer">
+        <img src="assets/logo.jpeg" alt="Logo" class="logo"></a>
     </div>
     <div class="m-menu-icon">
       <button type="button" (click)="showMobileNavBar = !showMobileNavBar" class="btn btn-outline-dark px-2">
@@ -10,22 +10,14 @@
       </button>
     </div>
     <div class="d-flex desktop">
-      <ul>
-        <li *ngFor="let item of menu;  index as i" class="px-3">
-          <a class="heading-4 tc-gl f-wr" (click)="navigateTo('AboutUs')" >
+      <ul class="pt-3">
+        <li *ngFor="let item of menu;  index as i" class="px-3 cursor-pointer">
+          <a class="heading-4 tc-gl f-wr" (click)="navigateTo(item.element)">
             <span class="tc-p f-wr">{{i+1}} . </span>{{item.name}}</a>
         </li>
-        <!-- <li class="px-3">
-          <a href="/Home" class="heading-4 tc-gl f-wr">SUPPORT US</a>
-        </li>
-        <li class="px-3">
-          <a href="/Home" class="heading-4 tc-gl f-wr">CONTACT US</a>
-        </li>
-        <li class="px-3">
-          <a href="/Home" class="heading-4 tc-gl f-wr">ABOUT US</a>
-        </li> -->
       </ul>
     </div>
   </div>
 </div>
-<nav-bar [showMobileNavBar]="showMobileNavBar" [menu]="menu" (closeNavBar)="showMobileNavBar = false"></nav-bar>
+<nav-bar [showMobileNavBar]="showMobileNavBar" [menu]="menu" (scrollToLink)="navigateTo($event)"
+  (closeNavBar)="showMobileNavBar = false"></nav-bar>

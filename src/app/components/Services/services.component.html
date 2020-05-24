@@ -1,0 +1,99 @@
+<div class="  mt-4 m-3  justify-content-between">
+    <div class="headingBox pb-3 pt-2">
+        <span class="heading-3 f-wr mainHeadings pb-2">
+            OUR SERVICES
+        </span>
+    </div>
+
+    <div class="mx-auto my-2 text-center">
+        <img src="assets/services.svg" class="img-block" alt="about ">
+    </div>
+    <div class=" pt-3 my-sm-3   mx-width p-3">
+        <div>
+            <span class="heading-3 f-wr ">
+                <span class="tc-p">1.</span>
+                Project Management Services
+            </span>
+        </div>
+        <div class="mt-4 project_box">
+
+            <div *ngFor='let item of projectManagementService' class=" div-box-shadow mt-4 service_box">
+
+                <header class="project__title">
+                    <h3 class="heading-3 f-wr pl-2">
+                        {{item.title}}
+                    </h3>
+                </header>
+                <main>
+                    <app-list [lists]="item.service" [type]=" 'bullet' " class="pl-1 pt-1">
+                    </app-list>
+
+                </main>
+            </div>
+        </div>
+    </div>
+
+
+    <div class=" pt-3 my-sm-3  mx-width p-3">
+        <div>
+            <span class="heading-3 f-wr ">
+                <span class="tc-p">2.</span>
+                Operation & Maintenace Services
+            </span>
+        </div>
+        <div class=" project_box  max-box-siz">
+
+            <div class=" pt-3 mx-2 m-sm-3 ">
+                <div class="px-3 py-1">
+                    <span class="heading-3">
+                        O&M is the Backbone of any Industry; it is the basic and most
+                        important part of any Manufacturing Industry. The revenue of
+                        the company depends on its Operation however Maintenance
+                        is the Back bone & support System of any successful
+                        operation.
+                    </span>
+                </div>
+            </div>
+
+            <div class=" pt-1 m-2 m-sm-3 ">
+                <div class="pt-1 px-3">
+                    <span class="heading-3">
+                        Proper operation and maintenance planning and control can
+                        save a huge amount of money, energy, time and most
+                        important it will enhance the Brand Value of the company.
+                        We offer following major services to our valued clients;
+
+                    </span>
+                </div>
+            </div>
+            <div class=" pt-3 m-2 m-sm-3 ">
+                <div class="pt-1 px-3">
+                    <h3 class="heading-3 tc-p f-wm letter-space-1 extra_bottom_mrgn">
+                        WE OFFER
+                    </h3>
+                    <app-list [lists]="mainServiceOffer" [type]=" 'bullet' " class="pl-1">
+                    </app-list>
+                </div>
+            </div>
+
+
+            <div class=" pt-3 m-2 m-sm-3 ">
+                <div class="pt-1 px-3">
+                    <h3 class="heading-4 tc-b f-wr  italic margnBtnN20px">
+                        <span class="heading-1 star">
+                            <fa-icon [icon]="adIcon"></fa-icon>
+                        </span>Apart from regular Project Management and O&M services, we also offer various specialised
+                        services as detailed below;
+                    </h3>
+                    <h3 class="heading-3 tc-s f-wm  mt-5">
+                        On Call expert with following fields
+                    </h3>
+                    <app-list [lists]="mainServiceOffer" [type]=" 'number' " class="pl-1">
+                    </app-list>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="width:100%; height: 30x;" class="b-w">
+
+    </div>

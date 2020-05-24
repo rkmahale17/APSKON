@@ -40,14 +40,12 @@
   margin-top: 4%;
 }
 
-
 .feature {
- 
-   li{
-     list-style:none ;
-     padding: 10px;
-   }
-   li::before{
+  li {
+    list-style: none;
+    padding: 10px;
+  }
+  li::before {
     color: $secoundry;
     content: "•";
     display: inline-block;
@@ -55,12 +53,32 @@
     top: 0em;
     font-weight: 600;
     width: 15px;
-   }
-
+  }
 }
 
-.imgEngineer{
+.imgEngineer {
   max-width: 300px;
   max-height: 300px;
   margin: auto;
+}
+
+.services_header {
+  border-bottom: 2px solid $primary;
+}
+
+.block-spacing {
+  margin-top: 10% !important;
+  margin-bottom: 10% !important;
+}
+
+.floating-button {
+  float: right;
+  padding: 10px;
+  margin: -10px 10px 0px 0px;
+  button fa-icon {
+    margin: 2px 2px 8px -1px;
+  }
+}
+.main_heading {
+  max-width: 350px;
 }

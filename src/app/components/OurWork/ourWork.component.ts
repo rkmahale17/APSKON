@@ -14,16 +14,16 @@ export class OurWorkComponent {
     arrowIcon = faGreaterThan;
     listOfAboutUs = [
         {
-            data: "De- Bottlenecking of manufacturing Processes."
+            data: 'De- Bottlenecking of manufacturing Processes.'
         },
         {
-            data: "Improvement in Overall Equipment Effectiveness through application of scientific tools approach."
+            data: 'Improvement in Overall Equipment Effectiveness through application of scientific tools approach.'
         },
         {
-            data: "Troubleshooting of complicated industrial problems"
+            data: 'Troubleshooting of complicated industrial problems'
         },
         {
-            data: "Development of Customised PLC solutions for any application."
+            data: 'Development of Customised PLC solutions for any application.'
         }
-    ]
+    ];
 }

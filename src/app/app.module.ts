@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './components/Toolbar/Toolbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -14,6 +13,8 @@ import { NavbarComponent } from './components/Navbar/navbar.component';
 import { AppListComponent } from './components/Lists/list.component';
 import { AboutUsComponent } from './components/AboutUs/aboutus.component';
 import { OurWorkComponent } from './components/OurWork/ourWork.component';
+import { ContactUsComponent } from './components/ContactUs/contactus.component';
+import { ServicesComponent } from './components/Services/services.component';
 
 
 
@@ -25,11 +26,12 @@ import { OurWorkComponent } from './components/OurWork/ourWork.component';
     NavbarComponent,
     AppListComponent,
     AboutUsComponent,
-    OurWorkComponent
+    OurWorkComponent,
+    ContactUsComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FontAwesomeModule,
     ReactiveFormsModule,
     FormsModule,
