@@ -12,16 +12,12 @@ export class ServicesComponent {
     adIcon = faExclamationCircle;
     projectManagementService = [
         {
-            title: 'Project Planning & Execution Assistance',
-            service: [{ data: 'Technogy selection' }, { data: 'Cost Estimation' }, { data: 'Equipment and Line List & sizing' }]
+            title: 'Project Mangement & Construction Supervision',
+            service: [{ data: 'Technology selection' }, { data: 'Cost Estimation' }, { data: 'Project Schedule' }, { data: 'Resource planning' }]
         },
         {
             title: 'Procurement Assistance',
             service: [{ data: 'Preparation of Procurement specs' }, { data: 'Tender Documents' }, { data: 'Vetting of Drawings and documents' }]
-        },
-        {
-            title: 'Project Management & Construction Supervision',
-            service: [{ data: 'Project Schedule' }, { data: 'Cost Estimation' }, { data: 'Resource planning' }]
         },
         {
             title: 'Commissioning Assistance',
