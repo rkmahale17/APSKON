@@ -1,5 +1,5 @@
 <div *ngIf="showMobileNavBar" class=" b-navbar navbar d-block d-b">
-    <div class="nav_menu tc-b f-wm d-flex  justify-content-between" (click)="closeAndScroll(item.element)"
+    <div class="nav_menu tc-b f-wm d-flex  justify-content-between" (click)="closeAndScroll(item)"
         *ngFor="let item of menu">
         <div>
             {{item.name}}

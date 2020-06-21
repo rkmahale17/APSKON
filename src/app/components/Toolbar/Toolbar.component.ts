@@ -17,10 +17,14 @@ export class ToolbarComponent {
 
   close_icon = faWindowClose;
   menu = [
-    { name: 'ABOUT US', url: '/Home', element: 'AboutUs' },
-    { name: 'OUR WORK', url: '/Home', element: 'OurWork' },
-    { name: 'SERVICES', url: '/Home', element: 'Services' },
-    { name: 'CONTACT US', url: '/Home', element: 'ContatUs' }
+    { name: 'HOME', url: '/', element: 'Home' },
+    { name: 'ABOUT US', url: '/aboutUs', element: 'AboutUs' },
+    { name: 'OUR WORK', url: '/ourWork', element: 'OurWork' },
+    { name: 'SERVICES', url: '/services', element: 'Services' },
+    { name: 'CONTACT US', url: '/contactUs', element: 'ContatUs' },
+    { name: 'MISSION & VALUES', url: '/mission', element: '' },
+    { name: 'CAREERS', url: '/careers', element: '' }
+
   ];
 
   showMobileNavBar = false;

@@ -3,6 +3,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
 
 import { faWindowClose } from "@fortawesome/free-solid-svg-icons";
+import { Router } from '@angular/router';
 
 
 
@@ -20,7 +21,7 @@ export class NavbarComponent {
     @Output() closeNavBar: EventEmitter<any> = new EventEmitter();
     @Output() scrollToLink: EventEmitter<any> = new EventEmitter();
 
-
+    constructor(private router: Router){}
     @Input() showMobileNavBar = false;
 
 
@@ -29,7 +30,7 @@ export class NavbarComponent {
     }
     closeAndScroll(element) {
         this.closeNavBar.emit(null);
-        this.scrollToLink.emit(element);
+        this.router.navigateByUrl(element.url);
     }
 
 }

@@ -5,15 +5,16 @@
         <img src="assets/logo.jpeg" alt="Logo" class="logo"></a>
     </div>
     <div class="m-menu-icon">
-      <button type="button" (click)="showMobileNavBar = !showMobileNavBar" class="btn btn-outline-dark px-2">
-        <fa-icon [icon]="menu_icon"></fa-icon>
+      <button type="button" (click)="showMobileNavBar = !showMobileNavBar" class="btn-r b-p px-2 outline-none">
+        <fa-icon [icon]="menu_icon" class="tc-w"></fa-icon>
       </button>
     </div>
     <div class="d-flex desktop">
       <ul class="pt-3">
         <li *ngFor="let item of menu;  index as i" class="px-3 cursor-pointer">
-          <a class="heading-4 tc-gl f-wr" (click)="navigateTo(item.element)">
-            <span class="tc-p f-wr">{{i+1}} . </span>{{item.name}}</a>
+          <a class="heading-4 tc-gl f-wr"  [routerLink]="item.url">
+            <span class="tc-p f-wr heading-7">{{i+1}} . </span>{{item.name}}
+          </a>
         </li>
       </ul>
     </div>

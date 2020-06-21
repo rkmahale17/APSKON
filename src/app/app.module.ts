@@ -15,6 +15,10 @@ import { AboutUsComponent } from './components/AboutUs/aboutus.component';
 import { OurWorkComponent } from './components/OurWork/ourWork.component';
 import { ContactUsComponent } from './components/ContactUs/contactus.component';
 import { ServicesComponent } from './components/Services/services.component';
+import { CareersComponent } from './components/Careers/careers.component';
+
+import { AppRoutingModule } from './app.routing';
+import { MissionComponent } from './components/Mission/mission.component';
 
 
 
@@ -28,10 +32,13 @@ import { ServicesComponent } from './components/Services/services.component';
     AboutUsComponent,
     OurWorkComponent,
     ContactUsComponent,
-    ServicesComponent
+    ServicesComponent,
+    CareersComponent,
+    MissionComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FontAwesomeModule,
     ReactiveFormsModule,
     FormsModule,
